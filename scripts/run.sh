@@ -35,21 +35,21 @@ then
 
     pip install BLE_GATT
 else
-    . $venvdir /bin/activate
+    . $venvdir/bin/activate
 fi
 
 target_btaddr=$1
 
-bluetoothctl <<+
-scan on
-scan off
-devices
-connect $target_btaddr
-trust $target_btaddr
-disconnect $target_btaddr
-exit
-+
-echo bluetoothctl exited
+#bluetoothctl <<+
+#scan on
+#scan off
+#devices
+#connect $target_btaddr
+#trust $target_btaddr
+#disconnect $target_btaddr
+#exit
+#+
+#echo bluetoothctl exited
 
 sleep 2
 
