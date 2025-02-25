@@ -53,6 +53,10 @@ target_btaddr=$1
 
 sleep 2
 
+$venvdir/bin/python3 fmic-mmp/mmp.py $1
+
+exit 0
+
 $venvdir/bin/python3 <<+
 import time
 import BLE_GATT
